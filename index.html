@@ -8,14 +8,14 @@
     <title>Coding quiz</title>
 </head>
 <body>
-    <div class="header">
+    <div id="header">
         <h1>CODING QUIZ!</h1>
         <p>View Highscores</p>
     </div>
-    <div class="main">
-        <h2>Welcome to the coding quiz!</h2>
-        <p>You will have 60 seconds to answer 6 questions!<br><br>*WARNING*<br><br>If you answer a question wrong, 10 seconds will be subtracted from the time remaining!</p>
-        <button id="button" type="button">Start Quiz!</button>
+    <div id="main">
+        <h2 id="question">Welcome to the coding quiz!</h2>
+        <p id="answers">You will have 60 seconds to answer 6 questions!<br><br>*WARNING*<br><br>If you answer a question wrong, 10 seconds will be subtracted from the time remaining!</p>
+        <input type="button" id="button" onclick="startQuiz()" value="Start Quiz!">
     </div>
     <script src="./script.js"></script>
 </body>

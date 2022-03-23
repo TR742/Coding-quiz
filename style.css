@@ -3,7 +3,7 @@ body {
 }
 
 /* Header */
-.header {
+#header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,21 +12,21 @@ body {
     border-bottom: 15px ridge purple;
 }
 
-.header p {
+#header p {
     font-weight: bold;
     padding-top: 30px;
 }
 
 /* Main */
-.main {
+#main {
     text-align: center;
 }
 
-.main h2 {
+#main h2 {
     padding: 10px 0px;
 }
 
-.main p {
+#main p {
     padding: 10px 0px;
     margin: 25px 0px;
 }
