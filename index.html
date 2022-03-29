@@ -5,18 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Coding quiz</title>
+    <title>Coding Quiz</title>
 </head>
 <body>
     <div id="header">
-        <h1>CODING QUIZ!</h1>
+        <h1>Coding Quiz!</h1>
         <p>View Highscores</p>
     </div>
-    <div id="main">
-        <h2 id="question">Welcome to the coding quiz!</h2>
-        <p id="answers">You will have 60 seconds to answer 6 questions!<br><br>*WARNING*<br><br>If you answer a question wrong, 10 seconds will be subtracted from the time remaining!</p>
-        <input type="button" id="button" onclick="startQuiz()" value="Start Quiz!">
+
+    <!-- Landing page -->
+    <div id="intro">
+        <h3>Welcome to the Coding Quiz!</h3>
+        <p>You will have 60 seconds to answer 5 questions about HTML, CSS, or JavaScript</p>
+        <p>*Be careful! Every incorrect answer takes 10 seconds off the time!*</p>
+        <button id="startBtn" type="button">Start Quiz!</button>
     </div>
+
+    <!-- Quiz -->
+    <div id="quiz">
+        <p id="timer"></p>
+        <h3 id="question">This is where the questions will be.</h3>
+        <div>
+            <button class="options" type="button">First option</button><br>
+            <button class="options" type="button">Second option</button><br>
+            <button class="options" type="button">Third option</button><br>
+            <button class="options" type="button">Fourth option</button>
+        </div>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>

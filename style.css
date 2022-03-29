@@ -1,40 +1,61 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Header */
+
 #header {
+    border-bottom: 10px ridge purple;
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    align-items: center;
-    margin: 25px;
+    align-items: baseline;
+}
+
+#header h1 {
     padding: 10px;
-    border-bottom: 15px ridge purple;
 }
 
 #header p {
-    font-weight: bold;
-    padding-top: 30px;
+    padding: 25px;
 }
 
-/* Main */
-#main {
+/* Intro */
+
+#intro {
     text-align: center;
+    margin: 50px 200px;
+    padding: 25px;
+    border: 5px ridge purple;
 }
 
-#main h2 {
-    padding: 10px 0px;
-}
-
-#main p {
-    padding: 10px 0px;
-    margin: 25px 0px;
-}
-
-#button {
+#startBtn {
     color: purple;
     background-color: beige;
-    font-size: 15px;
-    font-weight: bold;
+    border: 2px solid black;
     padding: 10px;
+    border-radius: 1px;
+    font-weight: bold;
+}
+
+/* Quiz */
+
+#quiz {
+    text-align: center;
+    border: 5px ridge purple;
+    margin: 50px 200px;
+    padding: 25px;
+}
+
+#quiz h3 {
+    padding: 10px;
+}
+
+#quiz button {
+    padding: 5px;
+    width: 150px;
+    margin: 2px;
+    border: 2px solid black;
+    background-color: beige;
+    border-radius: 1px;
 }
