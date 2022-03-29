@@ -36,7 +36,11 @@ let startBtn = document.getElementById('startBtn');
 let intro = document.getElementById('intro');
 let quiz = document.getElementById('quiz');
 let question = document.getElementById('question');
-let options = document.querySelector('.options')
+let answers = document.getElementById('answers');
+let choice1 = document.getElementById('option1');
+let choice2 = document.getElementById('option2');
+let choice3 = document.getElementById('option3');
+let choice4 = document.getElementById('option4');
 let timerEl = document.getElementById('timer');
 let score = 0;
 let time = 60;
@@ -60,4 +64,4 @@ function startTimer() {
             clearInterval(timeInterval);
         }
     }, 1000);
-}
+};
