@@ -59,3 +59,14 @@ body {
     background-color: beige;
     border-radius: 1px;
 }
+
+#timer {
+    text-align: center;
+}
+
+#highscores {
+    text-align: center;
+    border: 5px ridge purple;
+    margin: 50px 200px;
+    padding: 25px;
+}
