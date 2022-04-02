@@ -2,34 +2,34 @@
 
 let questionsArr = [
     {
-        question: "This is the first question",
-        options: ["First choice", "Second choice", "Third choice", "Fourth choice"],
-        answer: "First choice",
+        question: "What does HTML stand for?",
+        options: ["Hyper Text Markup Language", "Home Terminal Markup Language", "Home Text Makeup Language", "Hyper Terminal Makeup Language"],
+        answer: "Hyper Text Markup Language",
     },
     {
-        question: "This is the second question",
-        options: ["First choice2", "Second choice2", "Third choice2", "Fourth choice2"],
-        answer: "Second choice2",
+        question: "What does CSS stand for?",
+        options: ["Communicating Style Sheets", "Cascading Style Sheets", "Controlling Style Sheets", "Common Style Sheets"],
+        answer: "Cascading Style Sheets",
     },
     {
-        question: "This is the third question",
-        options: ["First choice3", "Second choice3", "Third choice3", "Fourth choice3"],
-        answer: "Third choice3",
+        question: "Where should an external <script> tag be placed in the HTML?",
+        options: ["Head", "Footer", "Body", "Div"],
+        answer: "Body",
     },
     {
-        question: "This is the fourth question",
-        options: ["First choice4", "Second choice4", "Third choice4", "Fourth choice4"],
-        answer: "Fourth choice4",
+        question: "Which of these is NOT a programming language?",
+        options: ["Javascript", "HTML", "CSS", "Anaconda"],
+        answer: "Anaconda",
     },
     {
-        question: "This is the fifth question",
-        options: ["First choice5", "Second choice5", "Third choice5", "Fourth choice5"],
-        answer: "First choice5",
+        question: "What is the name for a loop that never ends?",
+        options: ["Infinite", "For", "While", "Recursive"],
+        answer: "Infinite",
     },
     {
-        question: "This is the sixth question",
-        options: ["First choice6", "Second choice6", "Third choice6", "Fourth choice6"],
-        answer: "Second choice6",
+        question: "What is the process of finding errors and fixing them within a program?",
+        options: ["Compiling", "Executing", "Debugging", "Scanning"],
+        answer: "Debugging",
     }
 ];
 
