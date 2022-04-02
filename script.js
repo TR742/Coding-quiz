@@ -1,5 +1,4 @@
 // Array of Questions for the quiz
-
 let questionsArr = [
     {
         question: "What does HTML stand for?",
@@ -8,7 +7,7 @@ let questionsArr = [
     },
     {
         question: "What does CSS stand for?",
-        options: ["Communicating Style Sheets", "Cascading Style Sheets", "Controlling Style Sheets", "Common Style Sheets"],
+        options: ["Communicating Style Sheets", "Cascading Style Sheets", "Controlling Style Sheets", "Concentrated Style Sheets"],
         answer: "Cascading Style Sheets",
     },
     {
@@ -40,20 +39,30 @@ let quiz = document.getElementById('quiz');
 let question = document.getElementById('question');
 let timerEl = document.getElementById('timer');
 let options = document.getElementById('options');
+let userScore = document.getElementById('userscore');
+let highScores = document.getElementById('highscores');
+let scoreReveal = document.getElementById('revealscore');
+let userInitials = document.getElementById('scored');
+let submitBtn = document.getElementById('submit');
+let scores = document.getElementById('scores');
+let viewScores = document.getElementById('viewscores');
 let score = 0;
-let time = 60;
+// Slight delay in timer starting, changed to 59 seconds to adjust for delay
+let time = 59;
 let count = 0;
 let currentQuestion = 0;
-let userScore = document.getElementById('userscore');
 
 // Event Listeners
 startBtn.addEventListener("click", startQuiz);
+submitBtn.addEventListener("click", saveUserInitials);
+viewScores.addEventListener("click", showScores);
 
 // Functions //
 // Starts Quiz 
 function startQuiz() {
-    intro.remove();
     startTimer();
+    intro.remove();
+    quiz.style.display = "block";
     generateQuestion();
 };
 
@@ -96,9 +105,11 @@ function checkAnswer(event) {
     };
 };
 
-// Ends quiz/brings up Highscore entry
+// Ends quiz/brings up user initial entry board
 function endQuiz() {
     quiz.remove();
+    timerEl.remove();
+    scoreReveal.style.display = "block";
     userScore.textContent = score;
 };
 
@@ -114,3 +125,25 @@ function startTimer() {
         }
     }, 1000);
 };
+
+// Saves user initials to local storage
+function saveUserInitials() {
+    localStorage.setItem("high scores", JSON.stringify(userInitials.value + " - " + userScore.textContent));
+    scoreReveal.remove();
+    highScores.style.display = "block";
+    setHighScores();
+};
+
+// Sets user initials and score into High Score panel
+function setHighScores() {
+    let inputScores = localStorage.getItem("high scores");
+    scores.textContent = inputScores;
+}
+
+// Allows users to view High scores from landing page
+function showScores() {
+    intro.style.display = "none";
+    let inputScores = localStorage.getItem("high scores");
+    scores.textContent = inputScores;
+    highScores.style.display = "block";
+}

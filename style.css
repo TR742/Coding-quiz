@@ -64,6 +64,13 @@ body {
     text-align: center;
 }
 
+#revealscore {
+    text-align: center;
+    border: 5px ridge purple;
+    margin: 50px 200px;
+    padding: 25px;
+}
+
 #highscores {
     text-align: center;
     border: 5px ridge purple;

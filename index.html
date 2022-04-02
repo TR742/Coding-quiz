@@ -8,9 +8,10 @@
     <title>Coding Quiz</title>
 </head>
 <body>
+    <!-- Header -->
     <div id="header">
         <h1>Coding Quiz!</h1>
-        <p>View Highscores</p>
+        <a href="#highscores" id="viewscores"><p>View Highscores</p></a>
     </div>
 
     <!-- Landing page -->
@@ -23,16 +24,26 @@
 
     <!-- Quiz -->
     <p id="timer"></p>
-    <div id="quiz">
+    <div id="quiz" display: hidden>
         <!-- Quiz questions -->
         <h3 id="question"></h3>
         <!-- Quiz options -->
         <div id="options"></div>
     </div>
 
-    <div id="highscores">
-        <h3>Highscores</h3>
+    <!-- User Initial input with score -->
+    <div id="revealscore" display: hidden>
+        <h3>Congrats! You scored:</h3>
         <p id="userscore"></p>
+        <label for="scored" id="userinitials">Enter initials: </label>
+        <input type="text" id="scored" name="scored"><br><br>
+        <button type="submit" id="submit">Submit</button>
+    </div>
+
+    <!-- High Score panel -->
+    <div id="highscores" display: hidden>
+        <h3>Highscores</h3>
+        <p id="scores"></p>
     </div>
         
 
