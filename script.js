@@ -34,7 +34,6 @@ let questionsArr = [
 ];
 
 // Selectors
-
 let startBtn = document.getElementById('startBtn');
 let intro = document.getElementById('intro');
 let quiz = document.getElementById('quiz');
@@ -43,15 +42,14 @@ let timerEl = document.getElementById('timer');
 let options = document.getElementById('options');
 let score = 0;
 let time = 60;
-let count = 0
+let count = 0;
 let currentQuestion = 0;
+let userScore = document.getElementById('userscore');
 
 // Event Listeners
-
 startBtn.addEventListener("click", startQuiz);
 
 // Functions //
-
 // Starts Quiz 
 function startQuiz() {
     intro.remove();
@@ -61,15 +59,19 @@ function startQuiz() {
 
 // Generates Questions
 function generateQuestion() {
-    currentQuestion = questionsArr[count];
-    question.textContent = currentQuestion.question;
-    for (let j = 0; j < currentQuestion.options.length; j++) {
-        let button = document.createElement('button');
-        button.addEventListener('click', checkAnswer);
-        button.innerHTML = currentQuestion.options[j];
-        button.setAttribute('class', 'option');
-        options.append(button);
-    }
+    if (count > 5 || time < 1) {
+        endQuiz();
+    } else {
+        currentQuestion = questionsArr[count];
+        question.textContent = currentQuestion.question;
+        for (let j = 0; j < currentQuestion.options.length; j++) {
+            let button = document.createElement('button');
+            button.addEventListener('click', checkAnswer);
+            button.innerHTML = currentQuestion.options[j];
+            button.setAttribute('class', 'option');
+            options.append(button);
+        };
+    };
 };
 
 // Checking answer
@@ -80,7 +82,8 @@ function checkAnswer(event) {
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].remove();
         }
-        count++
+        score++;
+        count++;
         generateQuestion();
     } else {
         let buttons = document.querySelectorAll('.option');
@@ -91,6 +94,12 @@ function checkAnswer(event) {
         count++;
         generateQuestion();
     };
+};
+
+// Ends quiz/brings up Highscore entry
+function endQuiz() {
+    quiz.remove();
+    userScore.textContent = score;
 };
 
 // Starts timer
